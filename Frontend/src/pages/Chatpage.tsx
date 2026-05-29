@@ -39,7 +39,7 @@ export function Chatpage() {
     const [isRoomOnline, setIsRoomOnline] = useState<boolean>(false);
     const [typingStatus, setTypingStatus] = useState<{ isTyping: boolean; username?: string }>({ isTyping: false });
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const typingTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const [selectedFile, setSelectedFile] = useState<{ data: string; name: string } | null>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
 

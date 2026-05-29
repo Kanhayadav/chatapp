@@ -1,4 +1,4 @@
-import Delete from '../assets/icons/Delete.jsx';
+import Delete from '../assets/icons/Delete.js';
 import { useRef, useState, useEffect } from "react";
 import { Backend } from '../config';
 import axios from 'axios';
