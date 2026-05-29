@@ -24,7 +24,7 @@ interface UserInfo {
     username: string;
 }
 
-const socket: Socket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:3000', {
+const socket: Socket = io(import.meta.env.VITE_BACKEND_KEY || 'http://localhost:3000', {
     autoConnect: false,
     withCredentials: true
 });
