@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 
-const RAW_KEY = process.env.ENCRYPTION_KEY || 'your-default-fallback-secret-string';
+const RAW_KEY = process.env.ENCRYPTION_KEY || '';
 const ENCRYPTION_KEY = crypto.createHash('sha256').update(RAW_KEY).digest();
 const algo = 'aes-256-gcm';
 const IV_LENGTH = 12;
