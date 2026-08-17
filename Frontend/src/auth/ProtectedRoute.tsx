@@ -18,9 +18,9 @@ export function ProtectedRoute({ children }: ProjectedRouteProps) {
             try {
                 await axios.get(Backend + '/api/v1/me', { withCredentials: true })
                 setIsAuthenticated(true);
-            } catch (e) {
+            } catch {
                 setIsAuthenticated(false)
-                navigate('/signup');
+                navigate('/signup'); //removed e becuase eslint was acting up i could have used _e underscore or just conseled it 
             }
             finally {
                 setLoading(false);
